@@ -1,0 +1,59 @@
+The Affinda documentation covers webhooks for document processing workflows. The documentation shows how to set up webhooks to receive notifications when documents are parsed/validated, including Python code examples for webhook receivers. However, this is focused on Affinda's document processing, not general CI/CD pipeline setup.
+
+To set up webhooks with your trial account:
+
+Create a subscription via POST to /v3/resthook_subscriptions with your target URL, event type (e.g., document.parse.completed), and organization identifier
+Confirm subscription: Affinda sends a POST with X-Hook-Secret header to your URL. Respond with 200 status code
+Activate: Use the X-Hook-Secret to POST to /v3/resthook_subscriptions/activate
+Your webhook is now active and will receive notifications when events occur. The Webhooks documentation has detailed setup instructions with Python code examples.
+
+WebHooks Documentation: 
+
+FreeCodeCamp Link: https://www.freecodecamp.org/news/create-a-basic-cicd-pipeline-with-webhooks-on-linux/#heading-step-1-set-up-a-webhook-in-bitbucket
+
+Affinda AI: 
+
+Affinda has already used Amazon SageMaker to support its ML models and has since expanded its approach with AWS generative AI technologies, using Amazon-Bedrock - based large language models (LLMs) powered by different version of Claude Sonnet. It provided a real boost to give data sovereignty, regional data processing, and seamless integration with our existing AWS environment. 
+
+With Amazon Bedrock, there’s very little need for specific model training data. As a result, data accuracy has seen a 90 percent reduction in configuration time for new document extraction. Affinda also simplified model correction through natural-language explanations, cutting engineering overhead. The company reports a 90 percent cost savings for its product delivery team in the effort and resources required to roll out a custom use case. The platform now allows customers to self-serve, configuring new data extraction models themselves in a matter of minutes—a task that previously took Affinda’s internal team weeks or even months. By lowering the barrier to entry, Affinda has made intelligent document processing accessible to organizations across industries and use cases. This approach has reduced time to value and increased return on investment for Affinda’s customers. Meanwhile, customers also benefit from instant learning and adaptation, which improves accuracy and allows for straight-through processing at scale. Affinda is now advancing its AI capabilities by developing agents that act like seasoned data-entry professionals—detecting anomalies, tracing answers through internal systems, asking smart questions of the right people, and delivering resolved outcomes. 
+
+The company runs its Kubernetes clusters on Amazon Elastic Kubernetes Service (Amazon EKS) with Amazon Elastic Compute Cloud (Amazon EC2) and trains hundreds of custom models on Amazon SageMaker. Affinda also uses AWS CloudFormation to automate infrastructure management across its technology stack.
+
+Namely the services used are: 
+
+1. Amazon EC2
+2. Amazon Bedrock 
+3. Amazon SageMaker
+4. Amazon ElasticKubernetes Service 
+
+Next task is to execute this flask based application given in free code camp only. 
+
+To improve energy efficiency and reduce overall power consumption, we conducted a detailed 
+analysis of fan usage patterns. Based on our findings, we proposed energy-saving measures for 
+different operational scenarios, considering during hostel time and School time utilization rates. 
+A comprehensive analysis, including estimated energy savings and recommended conservation 
+strategies, is presented in the respective chapter.
+
+ 
+➢ Apply a highly reflective coating to the walls of the Class rooms, Offices, Auditorium, 
+additionally replace existing curtains with thick, light-colored ones to enhance brightness and 
+improve illumination levels. 
+
+➢ Install lights on beam which comes in the middle of the room to ensure better and more 
+uniform lighting. 
+
+➢ Implement occupancy sensors in all Lab and Class rooms & Offices. These sensors will 
+automatically adjust lumen levels based on real-time occupancy, ensuring that lights are only 
+activated when needed, effectively eliminating unnecessary energy consumption. 
+
+➢ Replace outdated fluorescent lights with energy-efficient LED lights of the recommended 
+capacity. Additionally, replace old LED lights with new, more efficient ones. This initiative could 
+lead to annual savings of 6,608 units of energy.
+
+➢ Install timers, motion sensors for common areas to automatically control lighting loads. 
+
+➢ Install a smart energy monitoring system to continuously track loading and optimize in real-time. 
+Demand side management during peak periods should be encouraged to avoid 
+unnecessary spikes. 
+
+Primarily my major objective is to automate a part of document processing along with major calculations.    
